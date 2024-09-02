@@ -1,0 +1,10 @@
+version: 1
+services:
+  - type: web
+    name: flask-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: free
+    regions:
+      - oregon
